@@ -1,0 +1,84 @@
+@font-face{
+	font-family: "MonsterratBlack";
+	src: url("./MontserratBlack.ttf");
+}
+
+.header{
+	color: black;
+	font-family: "MonsterratBlack";
+	font-size: 80px;
+	text-align: center;
+	margin: 1% 10%;
+}
+
+#countdown{
+	color: black;
+	font-family: "MonsterratBlack";
+	font-size: 60px;
+	text-align: center;
+}
+
+#noscript_countdown{
+	font-size: 40px;
+	text-align: center;
+}
+
+@media (max-width: 900px) {
+	.header{
+		font-size: 70px;
+	}
+	#countdown{
+		font-size: 50px;
+	}
+	#noscript_countdown{
+		font-size: 40px;
+	}
+}
+
+@media (max-width: 780px) {
+	.header{
+		font-size: 60px;
+	}
+	#countdown{
+		font-size: 40px;
+	}
+	#noscript_countdown{
+		font-size: 30px;
+	}
+}
+
+@media (max-width: 670px) {
+	.header{
+		font-size: 50px;
+	}
+	#countdown{
+		font-size: 30px;
+	}
+	#noscript_countdown{
+		font-size: 25px;
+	}
+}
+
+@media (max-width: 580px) {
+	.header{
+		font-size: 40px;
+	}
+	#countdown{
+		font-size: 25px;
+	}
+	#noscript_countdown{
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 450px) {
+	.header{
+		font-size: 30px;
+	}
+	#countdown{
+		font-size: 20px;
+	}
+	#noscript_countdown{
+		font-size: 15px;
+	}
+}

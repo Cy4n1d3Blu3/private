@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>WYJAZDOWA</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<div class="header">WYJAZDOWA DO ZAKOPAŃCA</div>
+	<div class="row" style="margin: 2% 10%;">
+		<div class="col-sm" style="background: black; margin: 5px; height: 5px;"></div>
+		<div class="col-sm-auto" style="background: black; margin: 5px; height: 5px;"></div>
+		<div class="col-sm" style="background: black; margin: 5px; height: 5px;"></div>
+	</div>
+	<div id="countdown"></div>
+	<noscript id="noscript_countdown">ENABLE JAVA SCRIPT YOU DUMBASS!</noscript>
+	<div class="row" style="margin: 2% 10%;">
+		<div class="col-sm" style="background: black; margin: 5px; height: 5px;"></div>
+		<div class="col-sm-auto" style="background: black; margin: 5px; height: 5px;"></div>
+		<div class="col-sm" style="background: black; margin: 5px; height: 5px;"></div>
+	</div>
+	
+	<script>
+		const countDownDate = new Date("April 29, 2023 05:00:00").getTime();
+		const countdown = setInterval(function() {
+		
+			const now = new Date().getTime();
+			const distance = countDownDate - now;
+			if (distance < 0) {
+				clearInterval(countdown);
+				document.getElementById("countdown").innerHTML = "EXPIRED";
+			} else {
+				const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+				const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+				const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+				document.getElementById("countdown").innerHTML =
+				(days < 10 ? "0" : "") + days + "d " +
+				(hours < 10 ? "0" : "") + hours + "h " +
+				(minutes < 10 ? "0" : "") + minutes + "m " +
+				(seconds < 10 ? "0" : "") + seconds + "s";
+			}
+
+		}, 1000);
+	</script>
+</body>
