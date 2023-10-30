@@ -1,84 +1,271 @@
-@font-face{
-	font-family: "MonsterratBlack";
-	src: url("./MontserratBlack.ttf");
+body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
 }
 
-.header{
+#background{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-image: url(./images/background.png);
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-position: top;
+	z-index: -1;
+}
+
+#main{
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+	height: 100%;
+	margin: 0% 10%;
+	color: white;
+	display: flex;
+	font-family: Garamond, serif;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+#main .section{
+	height: 100vh;
+	scroll-snap-align: start;
+}
+
+#archihelp{
+	background: #050505;
+}
+
+#archihelp > img{
+	width: 100%;
+	height: 150px;
+	object-fit: cover;
+	object-position: 50% 10%;
+}
+
+#archihelp .description
+{
+	margin: 16% 20% 0% 20%;
+}
+
+#archihelp .description .title{
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+}
+
+#archihelp .description .title img{
+	filter: invert(1);
+	width: 2.65em;
+	margin-right: 0.5em;
+}
+
+#archihelp .description .title p{
+	margin: 0;
+	font-size: 3em;
+}
+
+#archihelp .description > p{
+	margin-top: 2%;
+	font-size: 1.5em;
+}
+
+#collaboration{
+	background-color: #101010;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#collaboration .description{
+	margin: 0% 20% 0% 20%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#collaboration .description .title{
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+}
+
+#collaboration .description .title p{
+	margin: 0;
+	font-size: 3em;
+}
+
+#collaboration .description > p{
+	margin-top: 2%;
+	font-size: 1.5em;
+}
+
+#team{
+	background: #050505;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#team p{
+	font-size: 3em;
+	margin: 0% 20% 5% 20%;
+}
+
+#team .people {
+	margin: 0% 20%;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-column-gap: 5%;
+	grid-row-gap: 5%;
+}
+
+#team .people .person1 { grid-area: 1 / 1 / 2 / 2; }
+#team .people .person2 { grid-area: 1 / 2 / 2 / 3; }
+#team .people .person3 { grid-area: 1 / 3 / 2 / 4; }
+#team .people .person4 { grid-area: 1 / 4 / 2 / 5; }
+#team .people .person5 { grid-area: 2 / 1 / 3 / 2; }
+#team .people .person6 { grid-area: 2 / 2 / 3 / 3; }
+#team .people .person7 { grid-area: 2 / 3 / 3 / 4; }
+#team .people .person8 { grid-area: 2 / 4 / 3 / 5; }
+
+#team .people img{
+	width: 100%;
+}
+
+#team .people .name{
+	font-size: 1.5em;
+}
+
+#team .people .info{
+	font-size: 1em;
+}
+
+#services{
+	background: #929292;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+#services img{
+	width: 300px;
+	height: 100%;
+	object-fit: cover;
+}
+
+#services .description{
 	color: black;
-	font-family: "MonsterratBlack";
-	font-size: 80px;
+	margin: 5%;
+}
+
+#services .description > .title{
+	font-size: 3em;
+}
+
+#services .description > p{
+	font-size: 1.5em;
+}
+
+#services .description .position{
+	background-color: black;
+	border-radius: 10px;
+	padding: 20px;
+	margin: 10px 0px;
+	color: white;
+}
+
+#services .description .position .title{
+	font-size: 2em;
+}
+
+#services .description .position p{
+	font-size: 1.5em;
+	margin: 0;
+	margin-top: 20px;
+}
+
+#info{
+	background: #030303;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0% 20%;
+}
+
+#info .tile{
+	margin: 5%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#info .tile img{
+	filter: invert(1);
+	width: 150px;
+}
+
+#info .tile .title{
+	margin: 2%;
+	font-size: 1.5em;
+}
+
+#info .tile p{
+	font-size: 1em;
 	text-align: center;
-	margin: 1% 10%;
 }
 
-#countdown{
-	color: black;
-	font-family: "MonsterratBlack";
-	font-size: 60px;
-	text-align: center;
+#contact{
+	background: #030303;
+	padding: 0% 20%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
-#noscript_countdown{
-	font-size: 40px;
-	text-align: center;
+#contact > .title{
+	font-size: 3em;
 }
 
-@media (max-width: 900px) {
-	.header{
-		font-size: 70px;
-	}
-	#countdown{
-		font-size: 50px;
-	}
-	#noscript_countdown{
-		font-size: 40px;
-	}
+#contact > p{
+	font-size: 1.5em;
+	margin: 1% 0%;
 }
 
-@media (max-width: 780px) {
-	.header{
-		font-size: 60px;
-	}
-	#countdown{
-		font-size: 40px;
-	}
-	#noscript_countdown{
-		font-size: 30px;
-	}
+#contact ul{
+	margin-top: 0;
 }
 
-@media (max-width: 670px) {
-	.header{
-		font-size: 50px;
-	}
-	#countdown{
-		font-size: 30px;
-	}
-	#noscript_countdown{
-		font-size: 25px;
-	}
+#contact ul li{
+	font-size: 1.5em;
 }
 
-@media (max-width: 580px) {
-	.header{
-		font-size: 40px;
-	}
-	#countdown{
-		font-size: 25px;
-	}
-	#noscript_countdown{
-		font-size: 20px;
-	}
+#contact .grid{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
 }
 
-@media (max-width: 450px) {
-	.header{
-		font-size: 30px;
-	}
-	#countdown{
-		font-size: 20px;
-	}
-	#noscript_countdown{
-		font-size: 15px;
-	}
+#contact .grid .tile1 { grid-area: 1 / 1 / 2 / 2; } 
+#contact .grid .tile2 { grid-area: 1 / 2 / 2 / 3; } 
+#contact .grid .tile3 { grid-area: 2 / 1 / 3 / 3; }
+
+#contact .grid .tile{
+	border: 1px solid white;
+	border-radius: 10px;
+	background: #101010;
+	padding: 10px;
+}
+
+#contact .grid .tile .title{
+	font-size: 2em;
+}
+
+#contact .grid .tile p{
+	dont-size: 1.5em;
 }
