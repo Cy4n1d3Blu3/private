@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Metrophobic&display=swap');
+
+h1 { font-size: 3svw; }
+h2 { font-size: 2svw; }
+h3 { font-size: 1svw; }
+h4 { font-size: .7svw; }
+h1, h2, h3, h4 { margin: 0; font-weight: normal; letter-spacing: 0.05em;}
+
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+body{
+	width: 100svw;
+	margin: 0;
+	background: #222222;
+	font-family: 'Metrophobic', sans-serif;
+	overflow-x: hidden;
+}
+
+.logo{
+	display: grid;
+	grid-template-columns: 30svw 70svw;
+	grid-template-rows: 1fr;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	font-family: 'Koulen', sans-serif;
+	margin-top: 4svw;
+	
+	.icon{
+		grid-area: 1/1/2/2;
+		margin: 0 5svw;
+		
+		img{
+			width: 100%;
+		}
+	}
+	
+	.logotype{
+		grid-area: 1/2/2/3;
+		display: flex;
+		flex-direction: row;
+		align-items: flex-end;
+		background: white;
+		padding-left: 5svw;
+		color: #BB2649;
+		letter-spacing: 1svw;
+		font-weight: bold;
+		
+		.big-text{
+			font-size: 15svw;
+			line-height: .9;
+		}
+		.small-text{
+			font-size: 10svw;
+			line-height: 1.04;
+		}
+	}
+}
+
+.intro{
+	display: grid;
+	grid-template-columns: 30svw 70svw;
+	grid-template-rows: 25.7svw;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	margin-top: 2svw;
+
+	.photo{
+		grid-area: 1/1/2/2;
+		margin: 0 5svw;
+		overflow: hidden;
+
+		img{
+			object-fit: cover;
+			height: 100%;
+		}
+	}
+	.info{
+		color: white;
+		grid-area: 1/2/2/3;
+		text-wrap: wrap;
+		text-align: justify;
+		text-justify: inter-word;
+		margin-right: 5svw;
+
+		h1 { line-height: 1.5em; }
+		h3 { line-height: 1.5em; }
+		button{
+			border: 3px solid #BB2649;
+			color: #BB2649;
+			background-color: transparent;
+			padding: 0 2em;
+			margin: 1svw 0;
+		}
+	}
+}
+
+.services{
+	display: grid;
+	grid-template-columns: 30svw 70svw;
+	grid-template-rows: 36.55svw;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	margin-top: 2svw;
+
+	.info{
+		background-color: #BB2649;
+		margin-left: 5svw;
+		padding: 1svw;
+
+		h1 { color: white; }
+		.service{
+			background-color: #D9D9D9;
+			margin: 1svw 0;
+			padding: .5svw;
+		}
+	}
+
+	.photo{
+		grid-area: 1/2/2/3;
+		margin-right: 5svw;
+		img{
+			width: 100%;
+		}
+	}
+}
+
+.team{
+	margin: 0 5svw 3svw 5svw;
+
+	h1{
+		margin: 2svw 0;
+		color: white;
+	}
+
+	.people{
+		display: grid;
+		grid-template-columns: repeat(3, 30svw);
+		grid-template-rows: repeat(2, 30svw);
+		grid-column-gap: .5svw;
+		grid-row-gap: .5svw;
+	
+		.person1 { grid-area: 1 / 1 / 2 / 2; } 
+		.person2 { grid-area: 1 / 2 / 2 / 3; } 
+		.person3 { grid-area: 1 / 3 / 2 / 4; } 
+		.person4 { grid-area: 2 / 1 / 3 / 2; } 
+		.person5 { grid-area: 2 / 2 / 3 / 3; } 
+		.person6 { grid-area: 2 / 3 / 3 / 4; } 
+		
+		.person{
+			position: relative;
+
+			img{
+				width: 100%;
+			}
+			.description{
+				color: white;
+				text-align: center;
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: none;
+				width: 80%;
+				height: 90%;
+				margin: 5% 10%;
+				transition: opacity 0.3s ease;
+				
+				h2{ margin-bottom: 2em; }
+			}
+			.overlay{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgb($color: #000000, $alpha: 0);
+				transition: background-color 0.3s ease;
+			}
+
+			&:hover
+			{
+				.description{
+					display: block;
+					opacity: 1;
+				}
+				.overlay{
+					background-color: rgb($color: #000000, $alpha: .5);
+				}
+			}
+		}
+	}
+}
+
+.register{
+	background-color: #BB2649;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	button{
+		border: 3px solid #222222;
+		color: #222222;
+		background-color: transparent;
+		padding: 1em 3em;
+		margin: 6svw 0;
+	}
+}
+
+.footer{
+	margin: 5svw;
+	h3{
+		line-height: 1.5em;
+		color: white;
+	}
+}
+  
+@media screen and (max-device-width: 900px){
+	.intro{
+		display: flex;
+		flex-direction: column;
+		margin-top: 0;
+
+		.info{
+			margin-left: 5svw;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			h1{
+				margin-top: 1svw;
+			}
+			h3{
+				margin: 0 5svw;
+			}
+		}
+
+		.photo{
+			display: none;
+		}
+	}
+
+	.services{
+		display: flex;
+		flex-direction: column;
+
+		.info{
+			margin-right: 5svw;
+
+			h1{
+				text-align: center;
+			}
+
+			.service{
+				margin-left: 10svw;
+				margin-right: 10svw;
+			}
+		}
+
+		.photo{
+			display: none;
+		}
+	}
+
+	.team{
+		h1{
+			text-align: center;
+		}
+	}
+}
