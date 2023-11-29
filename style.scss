@@ -219,9 +219,9 @@ body{
 @media screen and (max-device-width: 1441px) and (orientation: portrait){
 
 	h1 { font-size: 6svw; }
-	h2 { font-size: 4svw; }
-	h3 { font-size: 3svw; }
-	h4 { font-size: 2svw; }
+	h2 { font-size: 3svw; }
+	h3 { font-size: 1.8svw;}
+	h4 { font-size: 1.2svw; }
 
 	.intro{
 		display: flex;
@@ -283,15 +283,13 @@ body{
 
 			.person{
 				.description{
-					margin: 1svw;
-					text-align: justify;
-
+					margin: 1svw 2svw;
+					text-align: left;
+					width: auto;
 					h2{
-						font-size: 3svw;
 						margin-bottom: 1svw;
 					}
 					h3{
-						font-size: 2svw;
 						margin: 0;
 					}
 				}

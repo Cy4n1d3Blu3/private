@@ -236,13 +236,13 @@ body {
     font-size: 6svw;
   }
   h2 {
-    font-size: 4svw;
-  }
-  h3 {
     font-size: 3svw;
   }
+  h3 {
+    font-size: 1.8svw;
+  }
   h4 {
-    font-size: 2svw;
+    font-size: 1.2svw;
   }
   .intro {
     display: flex;
@@ -305,15 +305,14 @@ body {
     grid-area: 3/2/4/3;
   }
   .team .people .person .description {
-    margin: 1svw;
-    text-align: justify;
+    margin: 1svw 2svw;
+    text-align: left;
+    width: auto;
   }
   .team .people .person .description h2 {
-    font-size: 3svw;
     margin-bottom: 1svw;
   }
   .team .people .person .description h3 {
-    font-size: 2svw;
     margin: 0;
   }
   .team h1 {
