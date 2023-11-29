@@ -217,6 +217,12 @@ body{
 }
   
 @media screen and (max-device-width: 900px){
+
+	h1{}
+	h2{}
+	h3{}
+	h4{}
+
 	.intro{
 		display: flex;
 		flex-direction: column;
@@ -263,6 +269,17 @@ body{
 	}
 
 	.team{
+		.people{
+			grid-template-columns: repeat(2, 45svw);
+			grid-template-rows: repeat(3, 45svw);
+
+			.person1 { grid-area: 1 / 1 / 2 / 2; }
+			.person2 { grid-area: 1 / 2 / 2 / 3; }
+			.person3 { grid-area: 2 / 1 / 3 / 2; }
+			.person4 { grid-area: 2 / 2 / 3 / 3; }
+			.person5 { grid-area: 3 / 1 / 4 / 2; }
+			.person6 { grid-area: 3 / 2 / 4 / 3; } 
+		}
 		h1{
 			text-align: center;
 		}
