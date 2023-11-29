@@ -23,7 +23,9 @@ h1, h2, h3, h4 {
 
 a {
   text-decoration: none;
-  color: inherit;
+  font-size: 2svw;
+  padding: 1em 3em;
+  margin: 6svw 0;
 }
 
 body {
@@ -95,6 +97,8 @@ body {
   text-align: justify;
   text-justify: inter-word;
   margin-right: 5svw;
+  display: flex;
+  flex-direction: column;
 }
 .intro .info h1 {
   line-height: 1.5em;
@@ -102,11 +106,13 @@ body {
 .intro .info h3 {
   line-height: 1.5em;
 }
-.intro .info button {
+.intro .info a {
+  align-self: flex-start;
+  justify-self: flex-end;
   border: 3px solid #BB2649;
   color: #BB2649;
   background-color: transparent;
-  padding: 0 2em;
+  padding: 0.5em 2em;
   margin: 1svw 0;
 }
 
@@ -215,12 +221,10 @@ body {
   align-items: center;
   justify-content: center;
 }
-.register button {
+.register a {
   border: 3px solid #222222;
   color: #222222;
   background-color: transparent;
-  padding: 1em 3em;
-  margin: 6svw 0;
 }
 
 .footer {
@@ -262,6 +266,9 @@ body {
     margin: 0 5svw;
     text-align: center;
   }
+  .intro .info a {
+    align-self: center;
+  }
   .intro .photo {
     display: none;
   }
@@ -278,6 +285,7 @@ body {
   .services .info .service {
     margin-left: 10svw;
     margin-right: 10svw;
+    padding: 1em;
   }
   .services .photo {
     display: none;
