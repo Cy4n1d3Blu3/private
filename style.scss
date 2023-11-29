@@ -218,10 +218,10 @@ body{
   
 @media screen and (max-device-width: 1441px) and (orientation: portrait){
 
-	h1 { font-size: 8svw; }
+	h1 { font-size: 6svw; }
 	h2 { font-size: 4svw; }
 	h3 { font-size: 3svw; }
-	h4 { font-size: 2.7svw; }
+	h4 { font-size: 2svw; }
 
 	.intro{
 		display: flex;
@@ -238,6 +238,7 @@ body{
 			}
 			h3{
 				margin: 0 5svw;
+				text-align: center;
 			}
 		}
 
@@ -278,7 +279,23 @@ body{
 			.person3 { grid-area: 2 / 1 / 3 / 2; }
 			.person4 { grid-area: 2 / 2 / 3 / 3; }
 			.person5 { grid-area: 3 / 1 / 4 / 2; }
-			.person6 { grid-area: 3 / 2 / 4 / 3; } 
+			.person6 { grid-area: 3 / 2 / 4 / 3; }
+
+			.person{
+				.description{
+					margin: 1svw;
+					text-align: justify;
+
+					h2{
+						font-size: 3svw;
+						margin-bottom: 1svw;
+					}
+					h3{
+						font-size: 2svw;
+						margin: 0;
+					}
+				}
+			}
 		}
 		h1{
 			text-align: center;

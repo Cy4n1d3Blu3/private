@@ -233,7 +233,7 @@ body {
 
 @media screen and (max-device-width: 1441px) and (orientation: portrait) {
   h1 {
-    font-size: 8svw;
+    font-size: 6svw;
   }
   h2 {
     font-size: 4svw;
@@ -242,7 +242,7 @@ body {
     font-size: 3svw;
   }
   h4 {
-    font-size: 2.7svw;
+    font-size: 2svw;
   }
   .intro {
     display: flex;
@@ -260,6 +260,7 @@ body {
   }
   .intro .info h3 {
     margin: 0 5svw;
+    text-align: center;
   }
   .intro .photo {
     display: none;
@@ -302,6 +303,18 @@ body {
   }
   .team .people .person6 {
     grid-area: 3/2/4/3;
+  }
+  .team .people .person .description {
+    margin: 1svw;
+    text-align: justify;
+  }
+  .team .people .person .description h2 {
+    font-size: 3svw;
+    margin-bottom: 1svw;
+  }
+  .team .people .person .description h3 {
+    font-size: 2svw;
+    margin: 0;
   }
   .team h1 {
     text-align: center;
