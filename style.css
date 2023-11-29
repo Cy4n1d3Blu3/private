@@ -231,7 +231,19 @@ body {
   color: white;
 }
 
-@media screen and (max-device-width: 900px) {
+@media screen and (max-device-width: 1440px) and (orientation: portrait) {
+  h1 {
+    font-size: 8svw;
+  }
+  h2 {
+    font-size: 4svw;
+  }
+  h3 {
+    font-size: 3svw;
+  }
+  h4 {
+    font-size: 2.7svw;
+  }
   .intro {
     display: flex;
     flex-direction: column;
